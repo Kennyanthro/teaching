@@ -107,7 +107,7 @@
 ## 'apply' function.
 
 ## To learn about this or any function, run 'help(function)' or '?
-## function'. Try this will 'apply':
+## function'. Try this with 'apply':
 
 ## To obtain the average inflammation of each patient we will need to
 ## calculate the mean of all of the rows (MARGIN = 1) of the data
