@@ -128,7 +128,7 @@ gapminder <- read.csv("https://raw.githubusercontent.com/swcarpentry/r-novice-ga
 ## observations in the current group rather than counting the number
 ## of observations in each group within a specific column. For
 ## instance, if we wanted to get the standard error of the life
-## expectency per continent:
+## expectancy per continent:
 
 ## You can also chain together several summary operations; in this
 ## case calculating the minimum, maximum, mean and se of each
