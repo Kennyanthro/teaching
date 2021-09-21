@@ -159,7 +159,7 @@ gapminder %>%
 ## observations in the current group rather than counting the number
 ## of observations in each group within a specific column. For
 ## instance, if we wanted to get the standard error of the life
-## expectency per continent:
+## expectancy per continent:
 gapminder %>%
     group_by(continent) %>%
     summarize(se_le = sd(lifeExp)/sqrt(n()))

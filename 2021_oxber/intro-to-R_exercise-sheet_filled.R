@@ -85,8 +85,8 @@ dat[30, 20]
 dat[c(1, 3, 5), c(10, 20)]
 
 ## If we want to select contiguous rows and columns, it's more
-## convienent to use ':' operator. This special function generates
-## sequesnces of numbers. For example, select the first ten columns of
+## convenient to use ':' operator. This special function generates
+## sequences of numbers. For example, select the first ten columns of
 ## values for the first four rows:
 dat[1:4, 1:10]
 
@@ -204,8 +204,8 @@ fahrenheit_to_kelvin <- function(temp_F) {
 }
 
 ## Instead of combining two functions in the previous step, you
-## could've perfomed the calculation in one line of code, by “nesting”
-## one function call inside another. Try it! Although convienient, too
+## could've performed the calculation in one line of code, by “nesting”
+## one function call inside another. Try it! Although convenient, too
 ## many nested functions can become difficult to read:
 celsius_to_kelvin(fahrenheit_to_celsius(32.0))
 

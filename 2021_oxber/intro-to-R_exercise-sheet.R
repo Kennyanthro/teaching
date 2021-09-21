@@ -23,8 +23,6 @@
 ## The data file should be located in the directory data inside the
 ## working directory. Load the data into R using read.csv:
 
-
-
 ##### Assigning Variables
 
 ## 'read.csv' reads the file, but we can't use the data unless we
@@ -159,8 +157,8 @@
 ## functions we have already created:
 
 ## Instead of combining two functions in the previous step, you
-## could've perfomed the calculation in one line of code, by “nesting”
-## one function call inside another. Try it! Although convienient, too
+## could've performed the calculation in one line of code, by “nesting”
+## one function call inside another. Try it! Although convenient, too
 ## many nested functions can become difficult to read:
 
 ##### Exercise: Create a Function
