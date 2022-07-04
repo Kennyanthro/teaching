@@ -1,0 +1,93 @@
+---
+title: "My Cool Reproducible Document"
+author: 'null'
+date: 'null'
+output:
+  pdf_document: default
+bibliography: references.bib
+---
+
+<!-- (task 1) add "very cool" to title, add author, and add your institution in date -->
+
+<!-- (task 2) knit to PDF, then knit to HTML -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+# Introduction
+
+<!-- (task 3) Add a sentence that includes an emphasis and a reference (in parentheses) to Wallis-Wallis_2015 -->
+
+*Cars* is a film about, you guessed it, cars [@Wallis-Wallis_2015]. 
+
+# Results
+
+<!-- (task 4) calculate the number of rows in the dataset cars and save as object -->
+
+```{r cars-descriptives}
+# this is a code chunk
+num_rows <- nrow(cars)
+```
+
+<!-- (task 5) Report the number of rows in a sentence -->
+
+There are `r num_rows` rows in the cars dataset.
+
+<!-- (task 6) Calculate and report the average speed (in mph) of the cars -->
+
+```{r cars-calcs}
+# what's the average speed (mph)?
+average_speed <- 
+  
+  cars %>%
+  summarise(mean = mean(speed, na.rm = TRUE))
+```
+
+The average speed is `r average_speed` mph.
+
+<!-- (task 7) Plot speed against distance (extension: add a regression line) -->
+<!-- (task 8) Add caption -->
+<!-- (task 9) Hide any messages (hint: it's code chunk option) -->
+
+```{r cars-plot, fig.cap = "Graph showing speed against stopping distance", message = FALSE}
+# here's a plot with a fitted regression line
+ggplot(cars) +
+  aes(x = speed, y = dist) +
+  geom_point() +
+  stat_smooth(method = "lm", col = "red")
+```
+
+<!-- (task 10) Print a table of the first five rows of the cars dataset, and include a caption (hint: use kable from knitr) -->
+
+```{r cars-table}
+## make table
+cars %>% head(5) %>%
+  knitr::kable(.,
+          caption="Stopping cars")
+```
+
+# Discussion
+
+<!-- (task 11) the `bookdown` package helps with cross-referencing, so change output in YAML to "bookdown::pdf_document2"
+<!-- (task 12) write a sentence that cross references both results section, the figure, and the table -->
+
+We used the `cars` dataset, as reported in Section \@ref(results), and found something groundbreaking. As seen in Figure \@ref(fig:cars-plot) and in Table \@ref(tab:cars-table), as speed increases, stopping distance increases.
+
+<!-- Additional tasks: 
+
+- Think of a recent paper you like: find a citation for it online, add it to the bib file, and reference it in the text above.
+
+- Change the citation style (hint: use "csl: apa.csl" in YAML; what do you notice?)
+
+- Add an image of a car
+# knitr::include_graphics("car-picture.jpg")
+
+- Adjust the directory structure, and the relevant commands, so that i) "car-picture.jpg" is in a separate "figures" folder and ii) "references.bib" is in a separate "references" folder.
+
+- Check out: citr, pandoc, papaja, and see if you can make fancier adjustments to your file
+
+-->
+
+# References
