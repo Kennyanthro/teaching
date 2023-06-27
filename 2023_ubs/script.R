@@ -49,7 +49,7 @@ sd <- sd(data_kung$height)
 
 ##### sample size
 
-## calculate and store standard deviation in object "sd"
+## calculate and store sample size in object "n"
 
 n <- length(data_kung$height)
 
